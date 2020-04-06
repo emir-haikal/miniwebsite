@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import { FaRProject } from 'react-icons/fa';
 import styles from '../css/navbar.module.css';
 import { FaAlignRight } from 'react-icons/fa';
 import links from '../constant/links';
 import socialIcons from '../constant/social-icons';
 import logo from '../images/logo.svg';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Navbar = () => {
 	const [ isOpen, setNav ] = useState(false);
@@ -26,7 +26,9 @@ const Navbar = () => {
 						return (
 							<li key={index}>
 								{' '}
-								<Link to={item.path}>{item.text}</Link>
+								<AniLink fade to={item.path}>
+									{item.text}
+								</AniLink>
 							</li>
 						);
 					})}
