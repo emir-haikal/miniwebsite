@@ -18,6 +18,18 @@ const Blog = ({ data }) => {
 						<img width="400" src={node.data.target.fields.file['en-US'].url} />
 					</div>
 				);
+			},
+			'embedded-entry-block': (node) => {
+				const { title, image, text } = node.data.target.fields;
+				// console.log(node.data.target.fields);
+
+				return (
+					<div>
+						<h1>this is maa post : {title['en-US']}</h1>
+						<img width="400" src={image['en-US'].fields.file['en-US'].url} />
+						{documentToReactComponents(text['en-US'])}
+					</div>
+				);
 			}
 		}
 	};

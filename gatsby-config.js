@@ -8,10 +8,13 @@ module.exports = {
 		description:
 			'Expolre GraphQL Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		author: '@emir',
-		data: {
-			name: 'emir',
-			age: 21
-		}
+		twitterUsername: '@emir_haikal',
+		image: '/defaultBcg.jpeg',
+		siteUrl: 'https://emir-mini-project.netlify.app'
+		// data: {
+		// 	name: 'emir',
+		// 	age: 21
+		// }
 	},
 
 	plugins: [
@@ -30,6 +33,7 @@ module.exports = {
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 			}
 		},
+		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-styled-components`,
 		`gatsby-transformer-sharp`,
